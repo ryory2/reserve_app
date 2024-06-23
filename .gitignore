@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# VSCode
+*.code-workspace # ワークスペース用ファイル
+.vscode # VSCode設定フォルダ
+/.gitignore # 絶対参照。ルート配下の.ignoreのみを対象とする
