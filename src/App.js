@@ -1,14 +1,19 @@
 /* App.js */
 import * as React from "react";
-import { Button } from "@mui/material";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import UserList from './pages/UserList';
+import UserDetail from './pages/UserDetail';
+import UserEdit from './pages/UserEdit';
 
 const  App = () => {
   return (
-    <>
-      <Button >text</Button>
-      <Button variant="contained">contained</Button>
-      <Button variant="outlined">outlined</Button>
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={UserList} />
+        <Route exact path="/users/:id" component={UserDetail} />
+        <Route exact path="/users/:id/edit" component={UserEdit} />
+      </Switch>
+    </Router>
   );
 };
 
